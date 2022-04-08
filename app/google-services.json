@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "25463695404",
+    "project_id": "cev-app-43a67",
+    "storage_bucket": "cev-app-43a67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25463695404:android:16d2633376f7450e874989",
+        "android_client_info": {
+          "package_name": "robertorodrigues.curso.appcev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25463695404-rau40u2o4llsi3jtjmqfrapd9sflvlml.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "robertorodrigues.curso.appcev",
+            "certificate_hash": "e199d6e6777f32d53d80d1673ff853bb4bf80fae"
+          }
+        },
+        {
+          "client_id": "25463695404-ovc9o5mat0b9dqiei2oliesk7hqkf4ds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0J8tDVBiYimjNiY1tBKSM1DagvpG2kh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25463695404-ovc9o5mat0b9dqiei2oliesk7hqkf4ds.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25463695404:android:b1493151ecb3f80e874989",
+        "android_client_info": {
+          "package_name": "robertorodrigues.curso.cev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25463695404-ovc9o5mat0b9dqiei2oliesk7hqkf4ds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0J8tDVBiYimjNiY1tBKSM1DagvpG2kh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25463695404-ovc9o5mat0b9dqiei2oliesk7hqkf4ds.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

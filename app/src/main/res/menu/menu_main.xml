@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/group_logado" android:visible="false">
+
+        <item android:id="@+id/menuPesquisa"
+            android:title="Pesquisar"
+            app:showAsAction="always"
+            android:icon="@drawable/ic_pesquisa_24"
+            />
+
+        <item android:id="@+id/menu_conversas"
+            android:icon="@drawable/ic_conversas_24"
+            android:title="Conversas"
+            app:showAsAction="always"/>
+
+
+        <item android:id="@+id/menu_sobre"
+            android:title="Sobre"/>
+
+        <item android:id="@+id/menu_sair"
+            android:title="Sair"/>
+
+    </group>
+
+    <group android:id="@+id/group_deslogado" android:visible="false">
+        <item
+            android:id="@+id/menu_cadastro"
+            android:title="Cadastrar/Entrar"
+            app:showAsAction="always" />
+
+    </group>
+
+</menu>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_degrade"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.AvaliacaoActivity">
+
+
+
+    <TextView
+        android:id="@+id/nomeProdutoAvaliacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Nome do Produto"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        tools:ignore="TextContrastCheck" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageProdutoAvaliacao"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/padrao" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Selecione a Estrela"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        tools:ignore="TextContrastCheck" />
+
+
+    <com.willy.ratingbar.ScaleRatingBar
+        android:id="@+id/simpleRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:srb_clickable="true"
+        app:srb_drawableEmpty="@drawable/estrelavazia"
+        app:srb_drawableFilled="@drawable/estrelacheia"
+        app:srb_isIndicator="false"
+        app:srb_minimumStars="1"
+        app:srb_numStars="5"
+        app:srb_rating="1"
+        app:srb_scrollable="true"
+        app:srb_starHeight="40dp"
+        app:srb_starWidth="40dp"
+        app:srb_stepSize="1.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </com.willy.ratingbar.ScaleRatingBar>
+
+    <TextView
+        android:id="@+id/textoResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="1.0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/buttonAvaliar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/fundo_botao"
+        android:text="Avaliar" />
+
+</LinearLayout>
