@@ -12,7 +12,7 @@
     tools:context=".activity.DetalhesProdutoActivity">
 
     <include layout="@layout/toolbar" />
-    
+
 
     <LinearLayout
         android:layout_width="wrap_content"
