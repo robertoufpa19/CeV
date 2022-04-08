@@ -28,6 +28,7 @@ public class AdapterAnuncios extends RecyclerView.Adapter<AdapterAnuncios.MyView
     public AdapterAnuncios(List<Anuncio> anuncios, Context context) {
         this.anuncios = anuncios;
         this.context = context;
+
     }
 
     public List<Anuncio> getAnuncios(){
