@@ -34,6 +34,7 @@ public class DetalhesProdutoActivity extends AppCompatActivity {
      private String idUsuarioLogado;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
