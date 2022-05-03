@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,110 +9,159 @@
     android:orientation="vertical"
     tools:context=".activity.LoginActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/logocev" />
 
-    <EditText
-        android:id="@+id/editCadastroEmailEmpresa"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/bd_edit_text"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:textColor="@color/AmareloEscuro"
-        android:textColorHint="@color/purple_700"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:layout_height="match_parent"
+        android:background="@drawable/fundo_degrade"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:hintEnabled="false"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleTint="@color/AmareloEscuro">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="20dp"
+            app:srcCompat="@drawable/logocev" />
 
         <EditText
-            android:id="@+id/editCadastroSenhaEmpresa"
+            android:id="@+id/editCadastroEmailEmpresa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="4dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/bd_edit_text"
             android:ems="10"
-            android:hint="Senha"
-            android:inputType="textPassword"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
             android:padding="10dp"
             android:textColor="@color/AmareloEscuro"
             android:textColorHint="@color/purple_700"
             tools:ignore="TouchTargetSizeCheck" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/AmareloEscuro">
 
+            <EditText
+                android:id="@+id/editCadastroSenhaEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bd_edit_text"
+                android:ems="10"
+                android:hint="Senha"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/AmareloEscuro"
+                android:textColorHint="@color/purple_700"
+                tools:ignore="TouchTargetSizeCheck" />
 
-    <Button
-        android:id="@+id/buttonAcesso"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#AE6801"
-        android:padding="16dp"
-        android:text="Logar"
-        android:background="@drawable/fundo_botao"
-        android:textColor="@color/white"
-        android:theme="@style/botaoPadrao"
-        app:iconTint="#00BCD4" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <ProgressBar
-        android:id="@+id/progressBarCadastro"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCadastrarEmpresa" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:gravity="center"
-        android:orientation="horizontal">
 
         <Button
-            android:id="@+id/buttonCadastrarEmpresa1"
-            android:layout_width="wrap_content"
+            android:id="@+id/buttonAcesso"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="4dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/fundo_botao"
-            android:layout_weight="1"
-            android:text="Cadastrar Empresa" />
+            android:backgroundTint="#AE6801"
+            android:padding="16dp"
+            android:text="Logar"
+            android:textColor="@color/white"
+            android:theme="@style/botaoPadrao"
+            app:iconTint="#00BCD4" />
 
-        <Button
-            android:id="@+id/buttonCadastroUsuario"
+
+        <LinearLayout
+            android:id="@+id/buttonAcessoGoogle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/fundo_botao"
-            android:text="Cadastrar Usuário" />
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView2"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icone_google" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Logar com Google"
+                android:textColor="@color/white"
+                android:theme="@style/botaoPadrao" />
+
+
+        </LinearLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progressBarCadastro"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCadastrarEmpresa" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonCadastrarEmpresa1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/fundo_botao"
+                android:text="Cadastrar Empresa" />
+
+            <Button
+                android:id="@+id/buttonCadastroUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/fundo_botao"
+                android:text="Cadastrar Usuário" />
+        </LinearLayout>
+
+
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
