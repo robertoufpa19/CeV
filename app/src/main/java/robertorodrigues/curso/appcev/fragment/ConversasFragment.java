@@ -85,7 +85,7 @@ public class ConversasFragment extends Fragment {
                                 String idUsuario = conversaSelecionada.getUsuarioExibicao().getIdUsuario();
                                 String nomeUsuario = conversaSelecionada.getUsuarioExibicao().getNome();
                                 String fotoUsuario = conversaSelecionada.getUsuarioExibicao().getUrlImagem();
-                                String token = conversaSelecionada.getUsuarioExibicao().getTokenUsuario();
+                                String token = conversaSelecionada.getUsuarioExibicaoAnuncio().getUsuarioExibicao().getTokenUsuario();
 
 
                             /* Recebendo os valores no objeto para enviar para
