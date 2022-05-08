@@ -6,6 +6,7 @@
     android:layout_margin="6dp"
     android:layout_marginBottom="6dp"
     android:orientation="vertical"
+    android:background="#E6E5E2"
     android:paddingLeft="16dp"
     android:paddingTop="10dp"
     android:paddingRight="16dp"
@@ -53,6 +54,7 @@
                     android:layout_width="282dp"
                     android:layout_height="wrap_content"
                     android:text="mensagem"
+                    android:textColor="#676666"
                     android:visibility="visible"
                     tools:visibility="visible" />
 

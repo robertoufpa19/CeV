@@ -49,6 +49,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:20.0.0'
     implementation 'com.google.firebase:firebase-database:20.0.0'
 
+    // login google
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+
 
     // dependencia mascara de moeda
     implementation 'me.abhinay.input:currency-edittext:1.1'

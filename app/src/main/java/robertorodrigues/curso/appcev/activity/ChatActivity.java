@@ -568,7 +568,7 @@ public class ChatActivity extends AppCompatActivity {
             to = tokenDestinatario ;
 
             //Monta objeto notificação
-            Notificacao notificacao = new Notificacao("CeV", "Nova Mensagem\n " + usuarioRemetente.getNome());
+            Notificacao notificacao = new Notificacao("CeV", "Nova Mensagem de " + usuarioRemetente.getNome());
             NotificacaoDados notificacaoDados = new NotificacaoDados(to, notificacao );
 
             NotificacaoService service = retrofit.create(NotificacaoService.class);
@@ -624,7 +624,7 @@ public class ChatActivity extends AppCompatActivity {
             to = tokenDestinatario ;
 
             //Monta objeto notificação
-            Notificacao notificacao = new Notificacao("CeV", "Nova Mensagem\n " + usuarioRemetente.getNome());
+            Notificacao notificacao = new Notificacao("CeV", "Nova Mensagem de " + usuarioRemetente.getNome());
             NotificacaoDados notificacaoDados = new NotificacaoDados(to, notificacao );
 
             NotificacaoService service = retrofit.create(NotificacaoService.class);
