@@ -34,6 +34,7 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="5dp"
+                android:textColor="@color/black"
                 android:gravity="center"
                 android:text="Nome Vendedor" />
         </LinearLayout>
@@ -102,6 +103,7 @@
                     android:id="@+id/textDescricaoMeuAnuncio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="#5A5959"
                     android:layout_marginStart="7dp"
                     android:text="Descrição" />
 
