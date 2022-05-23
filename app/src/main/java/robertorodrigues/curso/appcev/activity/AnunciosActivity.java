@@ -86,10 +86,13 @@ public class AnunciosActivity extends AppCompatActivity {
         firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
 
 
+
         // criar condição para verificar se usuario esta logado
         if(autenticacao.getCurrentUser() != null) { //logado
             idUsuarioLogado = UsuarioFirebase.getIdUsuario();
-            recuperarAnunciosPublicos();
+            recuperarDadosUsuario();
+
+
 
             // configurar botao de navegacao
             configuraBotaoNavegacao();
@@ -101,6 +104,8 @@ public class AnunciosActivity extends AppCompatActivity {
         }
 
 
+
+
         inicializarComponentes();
         
 
@@ -110,7 +115,6 @@ public class AnunciosActivity extends AppCompatActivity {
         adapterAnuncios = new AdapterAnuncios(listaAnuncios, this);
         recyclerAnunciosPublicos.setAdapter(adapterAnuncios);
 
-        recuperarAnunciosPublicos();
 
         //Listener para o search view
         searchViewPesquisaProduto.setOnSearchViewListener(new MaterialSearchView.SearchViewListener() {
@@ -197,9 +201,9 @@ public class AnunciosActivity extends AppCompatActivity {
                 )
         );
 
-        if(idUsuarioLogado != null){
+       /* if(idUsuarioLogado != null){
             recuperarDadosUsuario();
-        }
+        } */
 
     }
 
@@ -471,11 +475,22 @@ public class AnunciosActivity extends AppCompatActivity {
         usuarioRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.getValue() != null){
-                    usuario = snapshot.getValue(Usuario.class);
+
+                if(snapshot.exists()){
+
+                        usuario = snapshot.getValue(Usuario.class);
+
+                    recuperarAnunciosPublicos();
+                    dialog.dismiss();
+                }else{
+                    abrirConfiguracoes();
+                    exibirMensagem("Configure seu perfil");
+                    dialog.dismiss();
+
                 }
-              recuperarAnunciosPublicos();
-                dialog.dismiss();
+
+
+
             }
 
             @Override
@@ -688,10 +703,23 @@ public class AnunciosActivity extends AppCompatActivity {
         startActivity(new Intent(AnunciosActivity.this, LoginActivity.class));
     }
 
+
+
+
+
     private void abrirSlide(){
         finish();
         startActivity(new Intent(AnunciosActivity.this, SplashActivity.class));
 
+    }
+
+
+    /// finaliza no botão voltar do celular
+
+    @Override
+    public void finish() {
+        finishAffinity();
+        super.finish();
     }
 
 }

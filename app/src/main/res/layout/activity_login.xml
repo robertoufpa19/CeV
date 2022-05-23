@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="Logar com Google"
+                android:text="Entrar com Google"
                 android:textColor="@color/white"
                 android:theme="@style/botaoPadrao" />
 

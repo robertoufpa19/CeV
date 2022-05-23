@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "25463695404",
-    "project_id": "cev-app-43a67",
-    "storage_bucket": "cev-app-43a67.appspot.com"
+    "project_number": "638496899464",
+    "project_id": "app-cev-81894",
+    "storage_bucket": "app-cev-81894.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:25463695404:android:16d2633376f7450e874989",
+        "mobilesdk_app_id": "1:638496899464:android:05b42d3377558a794bba3d",
         "android_client_info": {
           "package_name": "robertorodrigues.curso.appcev"
         }
       },
       "oauth_client": [
         {
-          "client_id": "25463695404-rau40u2o4llsi3jtjmqfrapd9sflvlml.apps.googleusercontent.com",
+          "client_id": "638496899464-ar6vmcska4hids7ju7skca48d5kavvo1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "robertorodrigues.curso.appcev",
@@ -22,49 +22,20 @@
           }
         },
         {
-          "client_id": "25463695404-ovc9o5mat0b9dqiei2oliesk7hqkf4ds.apps.googleusercontent.com",
+          "client_id": "638496899464-7lvpnptla1jhpa9293odtggtuh3ttdce.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD0J8tDVBiYimjNiY1tBKSM1DagvpG2kh8"
+          "current_key": "AIzaSyBltM9egm0dEWKju_gATy9sq24xUC1Por0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "25463695404-ovc9o5mat0b9dqiei2oliesk7hqkf4ds.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:25463695404:android:b1493151ecb3f80e874989",
-        "android_client_info": {
-          "package_name": "robertorodrigues.curso.cev"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "25463695404-ovc9o5mat0b9dqiei2oliesk7hqkf4ds.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD0J8tDVBiYimjNiY1tBKSM1DagvpG2kh8"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "25463695404-ovc9o5mat0b9dqiei2oliesk7hqkf4ds.apps.googleusercontent.com",
+              "client_id": "638496899464-7lvpnptla1jhpa9293odtggtuh3ttdce.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

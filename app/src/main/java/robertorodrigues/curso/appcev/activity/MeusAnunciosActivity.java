@@ -79,7 +79,7 @@ public class MeusAnunciosActivity extends AppCompatActivity  {
             public void onClick(View v) {
 
                 //condicao para verificar se o usuario configurou seus dados(perfil)
-                if(usuario.getNome() != null){ //teste
+                if(usuario.getTelefone() != null && usuario.getNome() != null){ //teste
                     //entra na pagina de cadastro de anuncios
                     startActivity(new Intent(getApplicationContext(), CadastrarAnuncioActivity.class));
 

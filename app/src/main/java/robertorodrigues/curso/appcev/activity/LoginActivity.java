@@ -249,8 +249,10 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d(TAG, "entrar com credencial: sucesso");
                             FirebaseUser user = autenticacao.getCurrentUser();
                             updateUI(user);
+                            UsuarioFirebase.redirecionaUsuarioLogado(LoginActivity.this);
 
 
+                           /*
                             // dados do usuario
                             String idUsuario = task.getResult().getUser().getUid();
                             String emailUsuario = user.getEmail();
@@ -262,6 +264,8 @@ public class LoginActivity extends AppCompatActivity {
                             usuario.setEmail(emailUsuario);
                             usuario.setNome(nomeUsuario);
                             usuario.setUrlImagem(fotoUsuario);
+                            usuario.setTipo("cliente");
+
 
 
                             // inicio cadastro do token usuario
@@ -289,7 +293,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
                                         }
-                                    });    // fim cadastro do token
+                                    });    // fim cadastro do token  */
 
 
                         } else {
@@ -335,6 +339,11 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+    @Override
+    public void finish() {
+        finishAffinity();
+        super.finish();
+    }
 
 
 }

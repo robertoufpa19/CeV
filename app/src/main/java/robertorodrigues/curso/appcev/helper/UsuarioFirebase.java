@@ -19,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import robertorodrigues.curso.appcev.activity.AnunciosActivity;
 import robertorodrigues.curso.appcev.activity.EmpresaActivity;
+import robertorodrigues.curso.appcev.activity.LoginActivity;
 import robertorodrigues.curso.appcev.model.Usuario;
 
 public class UsuarioFirebase {
@@ -144,14 +145,24 @@ public class UsuarioFirebase {
                     Log.d("resultado", "onDataChange: " + dataSnapshot.toString() );
                     Usuario usuario = dataSnapshot.getValue( Usuario.class );
 
-                    String tipoUsuario = usuario.getTipo();
-                    if( tipoUsuario.equals("empresa") ){
-                        Intent i = new Intent(activity, EmpresaActivity.class);
-                        activity.startActivity(i);
-                    }else {
-                        Intent i = new Intent(activity, AnunciosActivity.class);
+                    if(dataSnapshot.exists()){
+
+                        String tipoUsuario = usuario.getTipo();
+                        if( tipoUsuario.equals("empresa") ){
+                            Intent i = new Intent(activity, EmpresaActivity.class);
+                            activity.startActivity(i);
+                        }else {
+                            Intent i = new Intent(activity, AnunciosActivity.class);
+                            activity.startActivity(i);
+                        }
+
+                    }else{
+
+                        Intent i = new Intent(activity, LoginActivity.class);
                         activity.startActivity(i);
                     }
+
+
 
                 }
 

@@ -78,6 +78,19 @@ public class ConfiguracoesUsuarioActivity extends AppCompatActivity {
         idUsuarioLogado = UsuarioFirebase.getIdUsuario();
         usuarioLogado = UsuarioFirebase.getDadosUsuarioLogado();
 
+        editUsuarioEmail.setText(usuarioLogado.getEmail());
+        editUsuarioNome.setText(usuarioLogado.getNome());
+        //recuperar imagem de perfil da empresa
+        urlImagemSelecionada = usuarioLogado.getUrlImagem();
+        if (  urlImagemSelecionada != null ){ // urlImagemSelecionada != ""
+            Picasso.get()
+                    .load(urlImagemSelecionada)
+                    .into(imagePerfilUsuario);
+        }
+
+
+
+
          // selecionar foto de perfil
         imagePerfilUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,10 +118,9 @@ public class ConfiguracoesUsuarioActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+
                 if(snapshot.getValue() != null){
                     Usuario usuario = snapshot.getValue(Usuario.class);
-                    editUsuarioNome.setText(usuario.getNome());
-                    editUsuarioEmail.setText(usuario.getEmail());
                     editUsuarioCidade.setText(usuario.getCidade());
                     editUsuarioBairro.setText(usuario.getBairro());
                     editUsuarioRua.setText(usuario.getRua());
@@ -117,15 +129,6 @@ public class ConfiguracoesUsuarioActivity extends AppCompatActivity {
                     String tipo = usuario.getTipo();
 
                     tipoUsuarioLogado = tipo;
-
-                    //recuperar imagem de perfil da empresa
-                    urlImagemSelecionada = usuario.getUrlImagem();
-                    if (  urlImagemSelecionada != null ){ // urlImagemSelecionada != ""
-                        Picasso.get()
-                                .load(urlImagemSelecionada)
-                                .into(imagePerfilUsuario);
-                    }
-
 
 
                 }
@@ -172,6 +175,7 @@ public class ConfiguracoesUsuarioActivity extends AppCompatActivity {
                                         usuarioLogado.setNumero(numero);
                                         usuarioLogado.setTelefone(telefone);
                                         usuarioLogado.setEmail(email);
+                                        usuarioLogado.setTipo("cliente");
 
 
 
@@ -194,14 +198,9 @@ public class ConfiguracoesUsuarioActivity extends AppCompatActivity {
                                                         usuarioLogado.atualizar();
                                                         exibirMensagem("Dados atualizados");
 
-                                                        if(tipoUsuarioLogado.equals("empresa")){
-                                                           abrirHomeEmpresa();
-                                                           finish();
-                                                        }else{
-                                                            abrirAnuncios();
-                                                            finish();//
-                                                        }
 
+                                                           abrirAnuncios();
+                                                           finish();
 
 
                                                     }

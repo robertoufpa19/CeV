@@ -83,6 +83,7 @@ public class Usuario  implements Serializable {
         usuarioMap.put("telefone", getTelefone());
         usuarioMap.put("email", getEmail());
         usuarioMap.put("tokenUsuario", getTokenUsuario());
+        usuarioMap.put("tipo", getTipo());
 
         return  usuarioMap;
 

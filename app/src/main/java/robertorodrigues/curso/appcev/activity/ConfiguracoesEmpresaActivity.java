@@ -170,6 +170,7 @@ public class ConfiguracoesEmpresaActivity extends AppCompatActivity {
                                         usuarioLogado.setRua(rua);
                                         usuarioLogado.setNumero(numero);
                                         usuarioLogado.setTelefone(telefone);
+                                        usuarioLogado.setTipo("empresa");
                                         usuarioLogado.setEmail(email);
 
 

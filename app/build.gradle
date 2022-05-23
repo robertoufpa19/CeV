@@ -6,7 +6,7 @@ android {
     compileSdk 30
 
     defaultConfig {
-        applicationId "robertorodrigues.curso.cev"
+        applicationId "robertorodrigues.curso.appcev"
         minSdk 23
         targetSdk 30
         versionCode 1
