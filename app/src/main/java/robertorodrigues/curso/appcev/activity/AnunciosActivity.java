@@ -450,7 +450,6 @@ public class AnunciosActivity extends AppCompatActivity {
 
 
 
-
                }
 
                @Override
