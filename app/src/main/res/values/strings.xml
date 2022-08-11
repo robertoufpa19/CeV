@@ -16,9 +16,6 @@
     <string name="app_ad_id">ca-app-pub-9224110911314505~5738012497</string>
     <string name="banner_ad_test_id">ca-app-pub-9224110911314505/2559694128</string>
 
-    <string name="default_web_client_id2" translatable="false">638496899464-7lvpnptla1jhpa9293odtggtuh3ttdce.apps.googleusercontent.com</string>
-
-
 
     <string-array name="regiao">
         <item> Belém </item>

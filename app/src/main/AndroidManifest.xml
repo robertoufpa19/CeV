@@ -15,19 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCeV">
         <activity
-            android:name=".activity.ConfiguracoesEmpresaActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity.CadastroUsuarioActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.EmpresaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.CadastroEmpresaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.LojasActivity"
             android:exported="false" />
         <activity
             android:name=".activity.SobreActivity"

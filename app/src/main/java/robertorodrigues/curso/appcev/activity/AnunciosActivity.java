@@ -92,8 +92,6 @@ public class AnunciosActivity extends AppCompatActivity {
             idUsuarioLogado = UsuarioFirebase.getIdUsuario();
             recuperarDadosUsuario();
 
-
-
             // configurar botao de navegacao
             configuraBotaoNavegacao();
         }else{
@@ -201,9 +199,7 @@ public class AnunciosActivity extends AppCompatActivity {
                 )
         );
 
-       /* if(idUsuarioLogado != null){
-            recuperarDadosUsuario();
-        } */
+
 
     }
 
@@ -413,12 +409,12 @@ public class AnunciosActivity extends AppCompatActivity {
 
     public void recuperarAnunciosPublicos(){
 
-      /*  dialog = new SpotsDialog.Builder()
+        dialog = new SpotsDialog.Builder()
                 .setContext(this)
                 .setMessage("Recuperando Anuncios!")
                 .setCancelable(false)
                 .build();
-        dialog.show(); */
+        dialog.show();
 
            anunciosPublicosRef.addValueEventListener(new ValueEventListener() {
                @Override
@@ -439,7 +435,7 @@ public class AnunciosActivity extends AppCompatActivity {
                        }
                        Collections.reverse(listaAnuncios); // exibicao reversa dos anuncios
                        adapterAnuncios.notifyDataSetChanged();
-                     //  dialog.dismiss();
+                       dialog.dismiss();
 
                    }else if(snapshot.getValue() == null){ // senao tiver anuncios
                        exibirMensagem("Você não tem anuncios!");
@@ -459,10 +455,11 @@ public class AnunciosActivity extends AppCompatActivity {
            });
     }
 
+    // nao esta recuperando dados do usuario
     private void recuperarDadosUsuario(){
         dialog = new SpotsDialog.Builder()
                 .setContext(this)
-                .setMessage("Carregando dados")
+                .setMessage("Carregando dados ")
                 .setCancelable(false)
                 .build();
         dialog.show();
@@ -477,10 +474,17 @@ public class AnunciosActivity extends AppCompatActivity {
 
                 if(snapshot.exists()){
 
-                        usuario = snapshot.getValue(Usuario.class);
+                        if(snapshot.getValue() != null){
+                            usuario = snapshot.getValue(Usuario.class);
+                            recuperarAnunciosPublicos();
+                            dialog.dismiss();
+                        }else{
+                            abrirConfiguracoes();
+                            exibirMensagem("Configure seu perfil");
+                            dialog.dismiss();
+                        }
 
-                    recuperarAnunciosPublicos();
-                    dialog.dismiss();
+
                 }else{
                     abrirConfiguracoes();
                     exibirMensagem("Configure seu perfil");
@@ -530,13 +534,7 @@ public class AnunciosActivity extends AppCompatActivity {
                         //entra na pagina de cadastro
                         startActivity(new Intent(getApplicationContext(), AnunciosActivity.class));
                         break;
-                    case R.id.ic_empresas:
-                        //empresas
-                        //entra na pagina de empresas CadastradasS
-                        startActivity(new Intent(getApplicationContext(), LojasActivity.class));
 
-
-                        break;
                     case R.id.ic_postagem:
                         //entra na pagina de meus anuncio
                         startActivity(new Intent(getApplicationContext(), MeusAnunciosActivity.class));

@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "638496899464",
+    "firebase_url": "https://app-cev-81894-default-rtdb.firebaseio.com",
     "project_id": "app-cev-81894",
     "storage_bucket": "app-cev-81894.appspot.com"
   },
@@ -19,6 +20,14 @@
           "android_info": {
             "package_name": "robertorodrigues.curso.appcev",
             "certificate_hash": "e199d6e6777f32d53d80d1673ff853bb4bf80fae"
+          }
+        },
+        {
+          "client_id": "638496899464-m07biur6ufg0a4u5pdd477tto3s5e068.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "robertorodrigues.curso.appcev",
+            "certificate_hash": "5f61b6a3bf4496ef23e404613557dc63298f5d3c"
           }
         },
         {

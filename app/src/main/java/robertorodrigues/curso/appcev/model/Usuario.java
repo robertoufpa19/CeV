@@ -54,22 +54,7 @@ public class Usuario  implements Serializable {
     }
 
 
-    public  void salvarEmpresa(){
-        DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
-        DatabaseReference usuarioRef = firebaseRef.child("empresas")
-                .child(getIdUsuario());
-        usuarioRef.setValue(this);
-    }
 
-    public void atualizarEmpresa(){
-
-        String identificadorUsuario = UsuarioFirebase.getIdUsuario();
-        DatabaseReference database = ConfiguracaoFirebase.getFirebaseDatabase();
-        DatabaseReference usuariosRef = database.child("empresas")
-                .child(identificadorUsuario);
-        Map<String, Object> valoresUsuario =  converterParaMap();
-        usuariosRef.updateChildren(valoresUsuario);
-    }
 
     @Exclude
     public Map<String, Object> converterParaMap(){

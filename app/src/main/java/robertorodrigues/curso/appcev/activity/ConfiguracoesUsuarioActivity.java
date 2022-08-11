@@ -354,9 +354,6 @@ public class ConfiguracoesUsuarioActivity extends AppCompatActivity {
         startActivity(new Intent(ConfiguracoesUsuarioActivity.this, AnunciosActivity.class));
     }
 
-    private void abrirHomeEmpresa(){
-        startActivity(new Intent(ConfiguracoesUsuarioActivity.this, EmpresaActivity.class));
-    }
 
     private void inicializarComponentes(){
         editUsuarioNome = findViewById(R.id.nomeUsuarioConfig);

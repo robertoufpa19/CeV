@@ -89,36 +89,7 @@
             app:iconTint="#00BCD4" />
 
 
-        <LinearLayout
-            android:id="@+id/buttonAcessoGoogle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/fundo_botao"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="5dp">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageView2"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/icone_google" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="Entrar com Google"
-                android:textColor="@color/white"
-                android:theme="@style/botaoPadrao" />
-
-
-        </LinearLayout>
 
 
         <ProgressBar
@@ -137,28 +108,19 @@
             app:layout_constraintTop_toBottomOf="@+id/buttonCadastrarEmpresa" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/buttonCadastrarEmpresa1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/fundo_botao"
-                android:text="Cadastrar Empresa" />
 
             <Button
-                android:id="@+id/buttonCadastroUsuario"
+                android:id="@+id/buttonCadastro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:background="@drawable/fundo_botao"
-                android:text="Cadastrar Usuário" />
+                android:text="Cadastre-se" />
         </LinearLayout>
 
 

@@ -1,7 +1,5 @@
 package robertorodrigues.curso.appcev.helper;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 
@@ -12,14 +10,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.ValueEventListener;
 
-import robertorodrigues.curso.appcev.activity.AnunciosActivity;
-import robertorodrigues.curso.appcev.activity.EmpresaActivity;
-import robertorodrigues.curso.appcev.activity.LoginActivity;
 import robertorodrigues.curso.appcev.model.Usuario;
 
 public class UsuarioFirebase {
@@ -113,69 +104,7 @@ public class UsuarioFirebase {
     }
 
 
-    public  static  boolean atualizarTipoUsuario(String tipo){
 
-        try {
-            FirebaseUser user = getUsuarioAtual();
-            UserProfileChangeRequest profile = new UserProfileChangeRequest.Builder()
-                    .setDisplayName(tipo)
-                    .build();
-            user.updateProfile(profile);
-            return  true;
-
-        }catch (Exception e){
-            e.printStackTrace();
-            return false;
-        }
-    }
-
-
-
-    public static void redirecionaUsuarioLogado(final Activity activity){
-
-        FirebaseUser user = getUsuarioAtual();
-        if(user != null ){
-            Log.d("resultado", "onDataChange: " + getIdUsuario());
-            DatabaseReference usuariosRef = ConfiguracaoFirebase.getFirebaseDatabase()
-                    .child("usuarios")
-                    .child( getIdUsuario() );
-            usuariosRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    Log.d("resultado", "onDataChange: " + dataSnapshot.toString() );
-                    Usuario usuario = dataSnapshot.getValue( Usuario.class );
-
-                    if(dataSnapshot.exists()){
-
-                        String tipoUsuario = usuario.getTipo();
-                        if( tipoUsuario.equals("empresa") ){
-                            Intent i = new Intent(activity, EmpresaActivity.class);
-                            activity.startActivity(i);
-                        }else {
-                            Intent i = new Intent(activity, AnunciosActivity.class);
-                            activity.startActivity(i);
-                        }
-
-                    }else{
-
-                        Intent i = new Intent(activity, LoginActivity.class);
-                        activity.startActivity(i);
-                    }
-
-
-
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-        }else{
-
-        }
-
-    }
 
 
 }

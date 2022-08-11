@@ -146,36 +146,6 @@
             app:layout_constraintTop_toBottomOf="@+id/editCadastroSenhaEmpresa" />
 
 
-        <LinearLayout
-            android:id="@+id/buttonCadastroGoogleUsuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/fundo_botao"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="5dp">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageView2"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/icone_google" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="Cadastrar com Google"
-                android:textColor="@color/white"
-                android:theme="@style/botaoPadrao" />
-
-
-        </LinearLayout>
 
 
         <ProgressBar

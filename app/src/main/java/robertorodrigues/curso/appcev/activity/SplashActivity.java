@@ -16,8 +16,6 @@ import robertorodrigues.curso.appcev.model.Usuario;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private FirebaseAuth autenticacao;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,34 +23,19 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
 
-        autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-
         // getSupportActionBar().hide(); // esconde toolbar
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                    verificarUsuarioLogado();
+                  abrirLogin();
 
             }
-        }, 3000); // 3 segundos
+        }, 1000); // 1 segundos
 
     }
 
-
-
-    // abrir tela principal se o usuario estiver logado
-    public void verificarUsuarioLogado(){
-
-        if(autenticacao.getCurrentUser() != null){
-            // startActivity(new Intent(getApplicationContext(), MainActivity.class)); // abrir a tela principal
-            UsuarioFirebase.redirecionaUsuarioLogado(SplashActivity.this);
-
-        }else{
-            abrirLogin();
-        }
-    }
 
     private void abrirLogin(){
         startActivity(new Intent(SplashActivity.this, LoginActivity.class));
