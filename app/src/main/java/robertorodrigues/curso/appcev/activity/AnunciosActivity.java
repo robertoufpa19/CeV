@@ -91,14 +91,11 @@ public class AnunciosActivity extends AppCompatActivity {
         if(autenticacao.getCurrentUser() != null) { //logado
             idUsuarioLogado = UsuarioFirebase.getIdUsuario();
             recuperarDadosUsuario();
-
             // configurar botao de navegacao
             configuraBotaoNavegacao();
         }else{
             exibirMensagem("Você precisa está logado para utilizar o App");
             abrirLogin();
-            // nao recupera os anuncios se nao estiver logado
-          //  recuperarAnunciosPublicos();
         }
 
 
@@ -439,8 +436,7 @@ public class AnunciosActivity extends AppCompatActivity {
 
                    }else if(snapshot.getValue() == null){ // senao tiver anuncios
                        exibirMensagem("Você não tem anuncios!");
-
-
+                       dialog.dismiss();
                    }
 
 
@@ -473,22 +469,16 @@ public class AnunciosActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 if(snapshot.exists()){
-
-                        if(snapshot.getValue() != null){
+                    dialog.dismiss();
                             usuario = snapshot.getValue(Usuario.class);
                             recuperarAnunciosPublicos();
-                            dialog.dismiss();
-                        }else{
-                            abrirConfiguracoes();
-                            exibirMensagem("Configure seu perfil");
-                            dialog.dismiss();
-                        }
 
 
                 }else{
+                    dialog.dismiss();
                     abrirConfiguracoes();
                     exibirMensagem("Configure seu perfil");
-                    dialog.dismiss();
+
 
                 }
 

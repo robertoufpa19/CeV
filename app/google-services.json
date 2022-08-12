@@ -1,50 +1,33 @@
 {
   "project_info": {
-    "project_number": "638496899464",
-    "firebase_url": "https://app-cev-81894-default-rtdb.firebaseio.com",
-    "project_id": "app-cev-81894",
-    "storage_bucket": "app-cev-81894.appspot.com"
+    "project_number": "67185227825",
+    "project_id": "ror-cev",
+    "storage_bucket": "ror-cev.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:638496899464:android:05b42d3377558a794bba3d",
+        "mobilesdk_app_id": "1:67185227825:android:f159454444f6d3a14c3d10",
         "android_client_info": {
           "package_name": "robertorodrigues.curso.appcev"
         }
       },
       "oauth_client": [
         {
-          "client_id": "638496899464-ar6vmcska4hids7ju7skca48d5kavvo1.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "robertorodrigues.curso.appcev",
-            "certificate_hash": "e199d6e6777f32d53d80d1673ff853bb4bf80fae"
-          }
-        },
-        {
-          "client_id": "638496899464-m07biur6ufg0a4u5pdd477tto3s5e068.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "robertorodrigues.curso.appcev",
-            "certificate_hash": "5f61b6a3bf4496ef23e404613557dc63298f5d3c"
-          }
-        },
-        {
-          "client_id": "638496899464-7lvpnptla1jhpa9293odtggtuh3ttdce.apps.googleusercontent.com",
+          "client_id": "67185227825-ankko40kjlmhbbem2d7fb4eo8gjd15db.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBltM9egm0dEWKju_gATy9sq24xUC1Por0"
+          "current_key": "AIzaSyAg7YhngpVRvorvwPNFZWvy7C419uQ8T_Y"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "638496899464-7lvpnptla1jhpa9293odtggtuh3ttdce.apps.googleusercontent.com",
+              "client_id": "67185227825-ankko40kjlmhbbem2d7fb4eo8gjd15db.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

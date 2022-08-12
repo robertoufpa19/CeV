@@ -82,10 +82,13 @@ public class ConfiguracoesUsuarioActivity extends AppCompatActivity {
         editUsuarioNome.setText(usuarioLogado.getNome());
         //recuperar imagem de perfil da empresa
         urlImagemSelecionada = usuarioLogado.getUrlImagem();
+
         if (  urlImagemSelecionada != null ){ // urlImagemSelecionada != ""
             Picasso.get()
-                    .load(urlImagemSelecionada)
+                    .load(Uri.parse(urlImagemSelecionada))
                     .into(imagePerfilUsuario);
+        }else{
+            imagePerfilUsuario.setImageResource(R.drawable.perfil);
         }
 
 
