@@ -79,17 +79,15 @@ public class AnunciosActivity extends AppCompatActivity {
 
 
         //configuracoes iniciais
+        inicializarComponentes();
+        firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         anunciosPublicosRef = ConfiguracaoFirebase.getFirebaseDatabase()
                 .child("anuncios");
 
-        firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
-
-
-
         // criar condição para verificar se usuario esta logado
         if(autenticacao.getCurrentUser() != null) { //logado
-            idUsuarioLogado = UsuarioFirebase.getIdUsuario();
+            idUsuarioLogado = UsuarioFirebase.getDadosUsuarioLogado().getIdUsuario();
             recuperarDadosUsuario();
             // configurar botao de navegacao
             configuraBotaoNavegacao();
@@ -98,10 +96,6 @@ public class AnunciosActivity extends AppCompatActivity {
             abrirLogin();
         }
 
-
-
-
-        inicializarComponentes();
         
 
         // configurar recyclerView
@@ -467,17 +461,14 @@ public class AnunciosActivity extends AppCompatActivity {
         usuarioRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
                 if(snapshot.exists()){
+                    usuario = snapshot.getValue(Usuario.class);
+                    recuperarAnunciosPublicos();
                     dialog.dismiss();
-                            usuario = snapshot.getValue(Usuario.class);
-                            recuperarAnunciosPublicos();
-
-
                 }else{
-                    dialog.dismiss();
                     abrirConfiguracoes();
                     exibirMensagem("Configure seu perfil");
+                    dialog.dismiss();
 
 
                 }
@@ -673,7 +664,6 @@ public class AnunciosActivity extends AppCompatActivity {
          buttonRegiao = findViewById(R.id.buttonRegiao);
          buttonCategoria = findViewById(R.id.buttonCategoria);
          recyclerAnunciosPublicos = findViewById(R.id.recyclerAnunciosPublicos);
-
          searchViewPesquisaProduto = findViewById(R.id.materialSearchPrincipal);
 
 
