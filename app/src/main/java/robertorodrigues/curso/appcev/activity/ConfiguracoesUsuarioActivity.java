@@ -80,19 +80,6 @@ public class ConfiguracoesUsuarioActivity extends AppCompatActivity {
 
         editUsuarioEmail.setText(usuarioLogado.getEmail());
         editUsuarioNome.setText(usuarioLogado.getNome());
-        //recuperar imagem de perfil da empresa
-        urlImagemSelecionada = usuarioLogado.getUrlImagem();
-
-        if (  urlImagemSelecionada != null ){ // urlImagemSelecionada != ""
-            Picasso.get()
-                    .load(Uri.parse(urlImagemSelecionada))
-                    .into(imagePerfilUsuario);
-        }else{
-            imagePerfilUsuario.setImageResource(R.drawable.perfil);
-        }
-
-
-
 
          // selecionar foto de perfil
         imagePerfilUsuario.setOnClickListener(new View.OnClickListener() {
@@ -122,19 +109,30 @@ public class ConfiguracoesUsuarioActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
 
-                if(snapshot.getValue() != null){
-                    Usuario usuario = snapshot.getValue(Usuario.class);
-                    editUsuarioCidade.setText(usuario.getCidade());
-                    editUsuarioBairro.setText(usuario.getBairro());
-                    editUsuarioRua.setText(usuario.getRua());
-                    editUsuarioNumeroCasa.setText(usuario.getNumero());
-                    editUsuarioTelefone.setText(usuario.getTelefone());
-                    String tipo = usuario.getTipo();
+                if (snapshot.exists()){
+                    if(snapshot.getValue() != null){
+                        Usuario usuario = snapshot.getValue(Usuario.class);
+                        editUsuarioCidade.setText(usuario.getCidade());
+                        editUsuarioBairro.setText(usuario.getBairro());
+                        editUsuarioRua.setText(usuario.getRua());
+                        editUsuarioNumeroCasa.setText(usuario.getNumero());
+                        editUsuarioTelefone.setText(usuario.getTelefone());
+                        String tipo = usuario.getTipo();
+                        //recuperar imagem de perfil
+                        urlImagemSelecionada = usuario.getUrlImagem();
 
-                    tipoUsuarioLogado = tipo;
+                        if (  urlImagemSelecionada != null ){
+                            Picasso.get()
+                                    .load(Uri.parse(urlImagemSelecionada))
+                                    .into(imagePerfilUsuario);
+                        }else{
+                            imagePerfilUsuario.setImageResource(R.drawable.perfil);
+                        }
 
-
+                        tipoUsuarioLogado = tipo;
+                    }
                 }
+
             }
 
             @Override
